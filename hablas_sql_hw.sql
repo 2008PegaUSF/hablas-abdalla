@@ -51,13 +51,13 @@ delete from "Customer"
 where "FirstName" = 'Robert' and "LastName" = 'Walter' ;
 
 -- 3.0 SQL Function
--- 3.1
+-- 3.1 System defined functions
 select current_time;
 
 select "Name" as "Name",
 length ("Name") as "length" from "MediaType";
 
--- 3.2
+-- 3.2 system defined aggregate functions
 create or replace function avg_invoices() returns decimal as $$
 	select avg("Total") from "Invoice";
 $$ language sql;
@@ -70,7 +70,7 @@ $$ language sql;
 
 select most_expensive_track();
 
--- 3.3
+-- 3.3 user defined functions
 create or replace function avg_price()
    returns decimal as $$
    declare average decimal ;
