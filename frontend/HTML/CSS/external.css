@@ -1,0 +1,18 @@
+/* Using paragraph selector*/
+p{
+    background-color: aquamarine;
+    color: yellowgreen;
+}
+/* Using class selector */
+.demo{
+background-color: blue;
+}
+
+/*Using id selector*/
+#a{
+    background-color: darkgreen;
+}
+/* styling specific classes inside a div*/
+div.demo{
+    
+}

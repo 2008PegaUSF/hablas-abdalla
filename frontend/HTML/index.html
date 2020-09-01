@@ -1,0 +1,132 @@
+<!-- this is an HTML comment 
+this 
+is 
+multiline
+comment
+-->
+
+<!DOCTYPE html>
+<!-- HTML docs ate made up of tags      <head>
+                                            <someothertage> something </sometage>
+                                        </head>
+                                        
+-->
+
+
+<html> <!-- html tag is root tag (most parent of parents tag) -->
+     <head>
+         <!--
+            <head>
+
+                Contains information about the page, rather than the content shown.
+                We can include some information, such as:
+
+                    - <style> tag to apply internal CSS styling to the web page
+                    - <link> tags for making use of external libraries or resources
+                    - <script> tags to make use of JavaScript (JS), we will use JS to make our web pages more dynamic
+                    - <meta> tags to include meta-information about the content of the page for search engine optimization (SEO)
+                    - <title> provides a title for our web page (displays on the top of the browser window/tab)
+        -->
+
+    <title> this is the page title</title>
+    <!--setting up internal CSS-->
+    <style>
+        h5{
+            background-color: cornflowerblue;
+        }
+        
+        h1{
+            color: #f242f5;
+            background-color: RGB(222, 155, 22);
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="CSS/external.css"> <!-- this is to import the CSS styling file -->
+    </head>
+    <body>
+        <h1>this is an h1 tag</h1>
+        <h6>this is an h6 tag</h6>
+        <p>this is a paragraph tag, you can right a lot here</p>
+
+        <div>
+            <h2>this is an h2 tag inside a div tag</h2>
+            <div>
+                <p> this is a div inside a div
+                    <br>
+                    this is a line break in my paragraph
+                </p>
+            </div>
+            <!-- tags can have attributes-->
+            <img src="https://www.mcgill.ca/oss/files/oss/styles/hd/public/cute-3281819_1920.jpg?itok=1tLaIhp2&timestamp=1569533232"
+            alt ="this is a cat" title="Cat" width="500" height="250">
+            <hr> <!-- this is horizontal line added to the page-->
+            <input>
+            <br>
+            <button>push me </button>
+        </div>
+        <div>
+            <h3> Tables</h3>
+            <table>
+                <tr> <!--table row-->
+                    <th> First Name</th> <!--table header-->
+                    <th>Last Name</th>
+                    <th> Fav Color</th>
+                </tr>
+                <tr>
+                    <td>Abdalla</td>
+                    <td>Hablas</td>
+                    <td>Blue</td>
+                </tr>
+                <tr>
+                    <td>Abdalla</td> <!--data field for table-->
+                    <td>Hablas</td>
+                    <td>Blue</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3> Lists</h3>
+            <h4>Ordered List</h4>
+            <ol type="a">
+                <li>First</li>
+                <li>Second</li>
+            </ol>
+            <h4>UnOrdered List</h4>
+            <ul>
+                <li>First</li>
+                <li>Second</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Escape Characters</h2> 
+            <!--
+            Escape Characters
+
+                There are some characters that are used in and reserved for HTML code. If you want to use them
+                and have them appear on your page, then you need to use escape characters.
+
+                    <       -       Less-than       &lt;        &#60;
+                    >       -       Greater-than    &gt;        &#61;
+                    &       -       Ampersand       &amp;
+                    ""      -       quotation marks &quot;
+                            -       space           &nbsp;
+
+        -->
+        <p>HTML &amp; CSS</p>
+        <p>Here is some text. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Here is some more.</p>
+        </div>
+        <a href="https://www.quranexplorer.com/quran/"> link to Quran Explorer</a> <!-- this called anchor tag-->
+   
+        <div class="demo">
+            <h1> this is all about CSS</h1>
+            <!-- inline CSS-->
+            <p id="a" style="color:red"> This is inline style example</p>
+            <div>
+                <!--Internal CSS-->
+                <div>
+                    <h5> This is using Internal Styling (Using style tag)</h5>
+                </div>
+                <!--external CSS, by importing settings from a file using link tag in the head tag-->
+            </div>
+        </div>
+    </body>
+</html>
