@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EventStuff</title>
+    </head>
+    <body>
+        <div id="A">A
+            <div id="B">B
+                <div id="C">C
+                    <div id="D">D
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="event.js"></script>
+    </body>
+</html>
+<!-- DOM - Document Object Model
+Specifies how browsers should create a model of an HTML page and how JS can access and
+ update the contents of a web page while it is in the browser window.
+Structural elements of an HTML page.
+A tree of JS objects used to render the view.
+Each HTML tag is a JS object.
+Dom Parsing	
+Loads entire page into memory
+Creates tree with all tags
+Can read or edit
+Slow
+Uses Sax Parsing
+
+Sax Parsing
+Sequential API for XML Parsing
+Pulls 1 line at a time into memory
+Goes sequentially through file
+Cannot edit
+faster
+
+DOM Selection and Manipulation
+How to use JS to change the look and behavior of your webpage.
+To find elements, we need to use our document object. It is the object that has 
+all of the representations of our HTML elements. We can retrieve elements by
+ id names (attribute), tag names and class names (also an attribute).
+ (In a js file)
+ document.getElementById(id)
+document.getElementsByTagName(name)
+document.getElementsByClassName(class)
+
+Interacting with elements
+[element].innerHTML          	[] not part of the notation
+[element].[attribute]
+[element].setAttribute([attribute], [value])
+[element].style
+
+Adding/Removing elements
+We need to use our document and register the element with said document.
+document.createElement()
+[element].appendChild(element)
+[element].removeChild(element)
+[element].replaceChild
+
+Navigation:
+parentNode
+childNodes[index]
+firstChild
+lastChild
+previousSibling
+nextSibling
+
+Event
+Some occurrence in our client-side environment, which we can respond to programmatically.
+Types
+Input events
+    onchange
+    onfocus
+    onsubmit
+    onkeydown
+    onkeypress
+    etc.
+Mouse events
+    onmousemove
+    onmouseover
+    Etc.
+Click events
+    onclick
+    ondoubleclick
+Load events
+    onload
+    onrestore
+    onrefresh
+    Etc.
+Event Object -
+     a JS representation of the most recent event that has fired. 
+    Very dynamic - lots of events occur. Has a number of important properties.
+
+    Event Listeners (JavaScript)
+    3 ways of implementing event listeners
+        Inline
+            <button onclick="someFunction">HI</button>
+            Couples structure and behavior unnecessarily
+            (views and scripts too tightly coupled). Generally not preferred, obtrusive.
+        Method
+            [element].onclick = function(){ … };
+        Long form
+            [element].addEventListener(type, handler, useCapture);
+            useCapture is an optional parameter that defaults to false.(bubbling)
+            Type: “click”, “mouseover”, etc. Events without “on” in front of their names.
+            Event handler function can (and should) be passed as a parameter.- no Parantheses
