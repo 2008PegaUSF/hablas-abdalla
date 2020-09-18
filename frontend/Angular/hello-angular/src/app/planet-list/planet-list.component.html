@@ -1,0 +1,93 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+
+        <!--
+            The {{}} syntax is used for interpolation. Interpolation evaluates an expression.
+            You can do simple operations like addition or even refer to variables from the TS file. 
+            we USE interpolatino to achieve one-way binding. 
+
+            One-way data binding (w/interpolation) projects values in TS to the HTML page to bde displayed. 
+            So any changes to the TS files will immediately affect the HTML. But not the other way around.
+
+        -->
+
+        <h1>Welcome {{currentUser }}</h1>
+
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class='col-md-2'>Filter By: </div>
+            <div class='col-md-4'>
+
+                <!--
+                        The [()] syntax is used for two-way data binding. Also, referred to as "apple in a box". In the 2-way data binding
+                        The HTML values and TS values are tied to each other. I one changes, the other immediately reflects those changes. 
+                        Hence, "2-way data binding"
+
+                        To set up 2-way data binding you need ngModel, which is part of the FormsModule module.
+
+                        Two-way binding is a combination of one-way binding and event binding. 
+
+                -->
+                <input type='text' [(ngModel)]='inputField' placeholder="filter">
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-md-6'>
+                <h3>My Filter : {{inputField}}</h3>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class='table-responsive'>
+
+    <!-- <table class = 'table' *ngIf = 'showTable'> -->
+    <table class='table' *ngIf="planets && planets.length">
+        <thead>
+            <tr>
+                <th>
+                    <!-- () event binding -->
+                    <button class='btn btn-primary' (click)='toggleImage()'>
+                        {{showImage? 'Hide':'Show' }} Image
+
+                    </button>
+
+                </th>
+                <th>
+                    <button class='btn btn-primary' (click)='toggleName()'>
+                        {{showName? 'Hide':'Show' }} Name
+                    </button>
+                </th>
+                <th>
+                    <button class='btn btn-primary' (click)='toggleLiviblility()'>
+                        {{showLivibility? 'Hide':'Show' }} Livibility
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- IT'S AN ENHANCED FOR LOOP for(int temp:planets )
+            
+                Specifically, *ngFor will copy an entire elment (and all sub elements) for every elemnt in an 
+                array you provide it. 
+            -->
+            <tr *ngFor='let temp of filteredPlanets'>
+                <td>
+                    <!-- Property binding, []-->
+                    <img *ngIf='showImage' [src]='temp.image' [title]='temp.name' [style.width.px]='imageWidth'
+                        [style.margin.px]='imageMargin'>
+                </td>
+                <!-- pipes transform data before the data is displayed.. in this case we convert name to uppercase
+                    to use pipes, we use | 
+                    pipes can do things like, uppercase, lowercase, formate currencu, etc-->
+                <td *ngIf='showName'> {{temp.name | prepend : 'Planet:' | uppercase}} </td>
+                <td *ngIf='showLivibility'> {{temp.livibility}} </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

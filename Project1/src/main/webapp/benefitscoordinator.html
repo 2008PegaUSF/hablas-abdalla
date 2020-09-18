@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Benefits Coordinator Homepage</title>
+        <meta charset="ISO-8859-1">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="http://localhost:8080/Project1/benefitscoordinator.js"> </script>
+        <link rel="stylesheet" 
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+            crossorigin="anonymous">   
+            <link rel="stylesheet" type="text/css" href="/Project1/benefitscoordinator.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>     
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="http://localhost:8080/Project1/benefitscoordinator.js"> </script>
+
+    </head>
+   <body style="background-image: url(https://images.unsplash.com/photo-1566125882500-87e10f726cdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80);">
+        <div class="container">
+            <div class="row">
+                <div class="col" style="margin-top: 10px;">
+                    <div class="cover-caption">
+                        <div class="row text-black">
+                            <div class="mx-auto text-center p-4">
+                                <div class="px-2">
+                                    <div class="welcomecolumn">
+                                                <h1 class="display-4 py-2 text-truncate" id="name"></h1>
+                                                <h3 id="address"></h3>
+                                                <h3 id="citystatezipcode"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-6" style="margin-top: 10px;">
+                    <div class="row text-black">
+                        <div class="mx-auto text-center p-4">
+                            <p style="font-size: 40px; margin-bottom: 0px;">Employee Pending Reimbursements</p>
+                            <div class="px-2">
+                    
+                                <div id="table1" >
+                                    <div class="card-body">
+                                        <table class="table" id="display">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">EmployeeID</th>
+                                                    <th scope="col">Request#</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <script>getRequests()</script> 
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                
+                <div class="col-6" style="margin-top:10px;">
+                        <div class="row text-black">
+                            <div class="col-xl-11 mx-auto text-center p-4">
+                                <p style="font-size: 40px; margin-bottom: 0px;">Approved Requests</p>
+                                <div class="px-2">
+                                                <div id="table3">
+                                                            <div class="card-body">
+                                                                <table class="table" id="request">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>EmployeeID</th>
+                                                                            <th>Request</th>
+                                                                            <th>Reimbursement Amount</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody >
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-black">
+                            <div class="col-xl-11 mx-auto text-center p-4">
+                                <p style="font-size: 40px; margin-bottom: 0px;">Action Required</p>
+                                <div class="px-2">
+                                                <div id="table3">
+                                                            <div class="card-body">
+                                                                <table class="table" id="action">
+                                                                    <thead>
+                                                                        <tr>
+                                                                           
+                                                                            <th>Request#</th>
+                                                                            <th>Supplemental Information</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody >
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="row" style ="margin-top: 10px;">
+                    <div class="col" style="margin-left: 15px; margin-bottom:10px;">
+                        <div class="row text-black">
+                            <div class="mx-auto text-center p-4">
+                                <div class="px-2">
+                                    <div id="logout">
+                                        <p>Ready to Logout?</p>
+                                        <form method="get" action="/Project1/project1/logout">
+                                            <button class="btn btn-primary" type="submit" value="Logout">Logout!</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+    </body>
+
+</html>

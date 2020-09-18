@@ -1,0 +1,63 @@
+
+Framework? 
+    A framework is a comphrensive library built to make coding complex applications easier. 
+    Allows you to do VERY complex things with smaller lines of code. 
+
+Framework and library? 
+    YOUR code will utilise library functionality to help it along. 
+    A framework will use your code like a library to funetune its functionality. 
+
+Setting up Angular 
+
+Install Node.js - give you access to node (a runtime environemtn for Angular projects) and npm (node package manager) that allows to 
+    install the appropriate packages/dependencies.
+
+Check everything is installed by:
+    node -v
+    npm -v
+
+We use npm, to install an Angular CLI (commmand line interface) - ng is short for angular 
+
+Once AngularCLI is installed we create a project using:
+    ng new <project-name>
+
+
+Important files and directory:
+
+e2e : directory that contains end-to-end tests which developers can use to test the user interface. These tests rely on a Javascript 
+        testing framework known as "Protactor" 
+
+src: This contains the source code for our Angular project. 
+
+angular.json : File that contains project configuration information. It details the vversion of the project, the location of serveral
+    key configuration files and information  about how the developer wishes to  handler the project files in development and production. 
+
+package.json : Is not specific to Angular, for any project developed in a Node environment. 
+package-lock.json: like the package file, also used in Node eneviornments for dependecy management. It differes by being more specific, 
+                    by describe the exact dependency tree and build version. 
+
+node-modules: this diectory contains all the dpendencies the develop is using in th environment. 
+
+
+
+Once a project has been created
+
+navigate to inside of the project space
+
+execute ng serve (by default run the proejct on localhost:4200)
+        ng serve -o 
+        ng serve --port 8000 (localhost:8000)
+        ng serve -o --port 8000
+
+
+
+Component is the building block of your page , components can be nested and they define what will be potrayed to the end user.
+    ng g c "componet name" ==> creating new Component
+
+    ng g p "foldername/filename" ==> creating new pipe 
+
+What does a componet consist of ? 
+                .html 
+                .ts 
+                .css
+                .spec.ts //unit testing 

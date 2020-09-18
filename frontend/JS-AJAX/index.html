@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class ="jumbtron text-center">
+            <h3>AJAX EXAMPLE</h3>
+            <h5>
+                <span>using the RESTful AP</span>
+            </h5>
+        </div>
+    </div>
+
+    <!--
+        <form> is synchronous, means "blocked"
+                - all other threads are stopped
+        AJAX - Asynchronous JavaScript and XML
+                -doesnt not stop other threads
+    -->
+
+    <div class = "container">
+        <div class= "well">
+            <input type="text" id="swID" placeholder="SW Id"  class = "form-control"/>
+            <input type="submit" value=" Get SW Info" id="swSubmit" class = "form-control btn btn-dark"/>
+        </div>
+    </div>
+
+    <div>
+        <h3 id = "swName"></h3>
+        <h4 id = "swBirthYear"></h4>
+    </div>
+
+
+    <!--<script type = "text/javascript" src = "AJAXDemo.js"></script>-->
+    <script type = "text/javascript" src = "fetch.js"></script>
+</body>
+</html>
